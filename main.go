@@ -22,6 +22,8 @@ func main() {
 	// API Endpoint registrations wrapped by Middleware
 	http.Handle("/create", middleware.LoggerMiddleware(http.HandlerFunc(handlers.CreateUserData)))
 	http.Handle("/users", middleware.LoggerMiddleware(http.HandlerFunc(handlers.GetUserHandler)))
+	http.Handle("/delete", middleware.LoggerMiddleware(http.HandlerFunc(handlers.DeleteUserHandler)))
+	http.Handle("/update", middleware.LoggerMiddleware(http.HandlerFunc(handlers.UpdateUserAgeHandler)))
 
 	fmt.Println("Server starting on port 8090 with professional structure...")
 	http.ListenAndServe(":8090", nil)
