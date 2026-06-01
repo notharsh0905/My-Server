@@ -1,0 +1,29 @@
+# 1. Local Database & Storage (Crucial!)
+# Never commit your local database files or binary state to GitHub
+*.db
+*.db-journal
+
+# 2. Go Compiled Binaries & Executables
+# This blocks compiled files from cluttering your repository
+main
+my_server
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# 3. VS Code & IDE Configuration Directories
+# Keeps your personal editor window sizes and settings out of the workspace
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# 4. OS-Specific System Files
+# Prevents Mac and Windows system clutter
+.DS_Store
+Thumbs.db
